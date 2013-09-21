@@ -15,10 +15,11 @@ import java.util.List;
 public class InsertionSort {
   
      public List lista = new ArrayList();
+     public List tempLista = new ArrayList();
     int ile;
-    
-   
-    
+    Rysuj rysuj = new Rysuj();
+    Rysuj.Narysuj tempRys;
+
     
     public void losowy(int min, int max, int ile) { // losuje dla podanego zakresu losowe liczby 
 
@@ -33,6 +34,7 @@ public class InsertionSort {
             System.out.println(c);
         }
         System.out.println("");
+         
 
     }
 
@@ -46,14 +48,11 @@ public class InsertionSort {
                 lista.set(j + 1, temp);
                 j = j - 1;
                 lista.set(j + 1, klucz);
-                System.out.println(lista.get(0)+""+lista.get(1)+""+lista.get(2)+""+lista.get(3)+""+lista.get(4));
-                     return lista;
-            }        
-                    
-                    
-                     
+             
+            }    tempRys = rysuj.new Narysuj(lista);
         }
          return null;
+     
     }
 
     public void wyswietl()  {
@@ -64,6 +63,7 @@ public class InsertionSort {
         }
     }
 
+    
     }
 
  
